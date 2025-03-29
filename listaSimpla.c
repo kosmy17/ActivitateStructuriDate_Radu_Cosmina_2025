@@ -121,27 +121,27 @@ nod* dezalocareLista(nod* cap) {
 }
 
 
-void main() {
-	//ne cream o lista  pe care  sa o initializam cu NULL
-	nod* lista = NULL;
-	//meregem pe  principiul ce e in stanga e si in dreapta (unde inseram, ce inseram)
-	//STudentul se creaza inline cu  fct de creare Student
-	lista = inserareInceput(lista,creareStudent("ALina", 25,8));
-	lista = inserareInceput(lista,creareStudent("Oana", 24,6));
-	lista = inserareInceput(lista,creareStudent("Ion", 26,7.5));
-	lista = inserareInceput(lista,creareStudent("CArina", 28,7));
-	lista = inserareInceput(lista,creareStudent("Cristina", 23,9));
-	afisareLista(lista);
-	printf("-----------------final----------------------------------------");
-	lista = inserareFinal(lista, creareStudent("x", 25, 8));
-	lista = inserareFinal(lista, creareStudent("y", 24, 6));
-	lista = inserareFinal(lista, creareStudent("z", 26, 7.5));
-	afisareLista(lista);
-	lista = dezalocareLista(lista);
-	printf("\n afisare lista dupa dezalocare :\n ");
-
-
-
-	
+//void main() {
+//	//ne cream o lista  pe care  sa o initializam cu NULL
+//	nod* lista = NULL;
+//	//meregem pe  principiul ce e in stanga e si in dreapta (unde inseram, ce inseram)
+//	//STudentul se creaza inline cu  fct de creare Student
+//	lista = inserareInceput(lista,creareStudent("ALina", 25,8));
+//	lista = inserareInceput(lista,creareStudent("Oana", 24,6));
+//	lista = inserareInceput(lista,creareStudent("Ion", 26,7.5));
+//	lista = inserareInceput(lista,creareStudent("CArina", 28,7));
+//	lista = inserareInceput(lista,creareStudent("Cristina", 23,9));
+//	afisareLista(lista);
+//	printf("-----------------final----------------------------------------");
+//	lista = inserareFinal(lista, creareStudent("x", 25, 8));
+//	lista = inserareFinal(lista, creareStudent("y", 24, 6));
+//	lista = inserareFinal(lista, creareStudent("z", 26, 7.5));
+//	afisareLista(lista);
+//	lista = dezalocareLista(lista);
+//	printf("\n afisare lista dupa dezalocare :\n ");
+//
+//
+//
+//	
 
 }
