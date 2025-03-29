@@ -25,7 +25,7 @@ Student creareStudent(const char* n, int v, float m) {
 
 //afisare student
 void afisareStudent(Student s) {
-	printf("/n Studentul cu numele  %s are  varsta  %d si media %5.2f. ", s.nume, s.varsta, s.medie);
+	printf("\n Studentul cu numele  %s are  varsta  %d si media %5.2f. \n", s.nume, s.varsta, s.medie);
 }
 
 //facem struct  nodului
@@ -106,6 +106,20 @@ void afisareLista(nod* cap) {
 	}
 
 }
+//functie dezalocare lista
+nod* dezalocareLista(nod* cap) {
+	while (cap) {
+		nod* aux = cap;
+		//mutam cap pe urm nod
+		cap=cap->next;
+		//dez   e a ramas in spate
+		free(aux->info.nume);
+		free(aux);
+
+	}
+	return cap;
+}
+
 
 void main() {
 	//ne cream o lista  pe care  sa o initializam cu NULL
@@ -118,6 +132,16 @@ void main() {
 	lista = inserareInceput(lista,creareStudent("CArina", 28,7));
 	lista = inserareInceput(lista,creareStudent("Cristina", 23,9));
 	afisareLista(lista);
+	printf("-----------------final----------------------------------------");
+	lista = inserareFinal(lista, creareStudent("x", 25, 8));
+	lista = inserareFinal(lista, creareStudent("y", 24, 6));
+	lista = inserareFinal(lista, creareStudent("z", 26, 7.5));
+	afisareLista(lista);
+	lista = dezalocareLista(lista);
+	printf("\n afisare lista dupa dezalocare :\n ");
+
+
+
 	
 
 }
