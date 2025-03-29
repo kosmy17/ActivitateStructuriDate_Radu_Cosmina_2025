@@ -144,4 +144,3 @@ nod* dezalocareLista(nod* cap) {
 //
 //	
 
-}
