@@ -37,61 +37,61 @@ typedef struct nod {
 	//next
 	struct nod* next;
 }nod;
-
-//functia creare  nod
-nod* creareNod (Cladire info,  nod*  next){
-	//declaram un nod * nou
-	nod* nou = (nod*)malloc(sizeof(nod));
-	//adaugam info  utila
-	//facem un deep  copy
-	nou->info = creareCladire(info.denumire, info.nrEtaje, info.suprafata);
-	nou->next = next;
-	//returnam  nodulnou creat
-	return nou;
-}
-
-
-//inserare inceput param(lista , struct)
-nod* inserareInceput(nod* cap, Cladire c) {
-	//cream un nod* nou
-	nod* nou = creareNod(c, NULL);
-	//verificam  daca  exista lista
-	if (cap) {
-		//refacem legaturile
-		nou->next = cap;
-		//nou devine primul nod
-		cap = nou;
-	}
-	else {
-		//nodul nou este  singurul   din lista
-		cap = nou;
-	}
-	//returnam lusta
-	return cap;
-
-}
-nod* inserareFinal(nod* cap, Cladire c) {
-	//cream   un nod  *nou
-	nod* nou = creareNod(c, NULL);
-	//testam  lista
-	if (cap) {
-		//facem o  copie la primul nod
-		nod* p = cap;
-		//parcurgem lista pana la utlimul   nod (cat timp avem next)
-		while (p->next) {
-			p = p->next;
-		}
-		//cand  iese din  while ,p->next se afla pe ultimul nod
-		//facem  leg intre  p->next  si  nodul nou
-		p->next = nou;
-	}
-	else {
-		//nodul nou este singurul  din lista
-		cap = nou;
-	}
-	return  cap;
-
-}
+//
+////functia creare  nod
+//nod* creareNod (Cladire info,  nod*  next){
+//	//declaram un nod * nou
+//	nod* nou = (nod*)malloc(sizeof(nod));
+//	//adaugam info  utila
+//	//facem un deep  copy
+//	nou->info = creareCladire(info.denumire, info.nrEtaje, info.suprafata);
+//	nou->next = next;
+//	//returnam  nodulnou creat
+//	return nou;
+//}
+//
+//
+////inserare inceput param(lista , struct)
+//nod* inserareInceput(nod* cap, Cladire c) {
+//	//cream un nod* nou
+//	nod* nou = creareNod(c, NULL);
+//	//verificam  daca  exista lista
+//	if (cap) {
+//		//refacem legaturile
+//		nou->next = cap;
+//		//nou devine primul nod
+//		cap = nou;
+//	}
+//	else {
+//		//nodul nou este  singurul   din lista
+//		cap = nou;
+//	}
+//	//returnam lusta
+//	return cap;
+//
+//}
+//nod* inserareFinal(nod* cap, Cladire c) {
+//	//cream   un nod  *nou
+//	nod* nou = creareNod(c, NULL);
+//	//testam  lista
+//	if (cap) {
+//		//facem o  copie la primul nod
+//		nod* p = cap;
+//		//parcurgem lista pana la utlimul   nod (cat timp avem next)
+//		while (p->next) {
+//			p = p->next;
+//		}
+//		//cand  iese din  while ,p->next se afla pe ultimul nod
+//		//facem  leg intre  p->next  si  nodul nou
+//		p->next = nou;
+//	}
+//	else {
+//		//nodul nou este singurul  din lista
+//		cap = nou;
+//	}
+//	return  cap;
+//
+//}
 
 //functia afisare lista
 nod* afisareLista(nod* cap) {
@@ -125,12 +125,12 @@ nod* dezalocareLista(nod * cap) {
 		return cap;
 	}
 
-void main() {
-	//cream o lista si o initializam  cu NULL
-		nod* lista = NULL;
-		//ce e  in stg e si in dreapta
-		lista = inserareInceput(lista, creareCladire("Pireus", 6, 350));
-		lista = inserareInceput(lista, creareCladire("Alpha", 3, 250.5));
-		lista = inserareInceput(lista, creareCladire("Omega", 9, 555));
-		afisareLista(lista);
-}
+//void main() {
+//	//cream o lista si o initializam  cu NULL
+//		nod* lista = NULL;
+//		//ce e  in stg e si in dreapta
+//		lista = inserareInceput(lista, creareCladire("Pireus", 6, 350));
+//		lista = inserareInceput(lista, creareCladire("Alpha", 3, 250.5));
+//		lista = inserareInceput(lista, creareCladire("Omega", 9, 555));
+//		afisareLista(lista);
+//}
